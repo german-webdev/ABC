@@ -76,8 +76,11 @@ pauseButton.addEventListener('click', () => {
     wg.classList.toggle('active');
     if (wg.classList.contains('active')) {
         pauseButton.textContent = 'Cтоп'
+        pauseButton.style.background = '#ff002b'
+
     } else {
         pauseButton.textContent = 'Старт'
+        pauseButton.style.background = '#49b40a'
     }
     
 })
