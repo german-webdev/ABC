@@ -6,16 +6,35 @@ html, body {
 	padding: 0;	
 }
 
+.header {
+    display: flex;
+
+    position: sticky;
+    top: 0;
+    
+    justify-content: center;
+    align-items: center;
+
+    padding: 16px;
+
+    background: linear-gradient(130deg, #ffffff 10%, #facb8d 90% );
+    box-shadow: 2px 2px 15px -5px #727272;
+}
+
+.logo__image {
+    position: absolute;
+    width: 250px;
+    top: -65px;
+    left: 0;
+}
+
 #settings {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-	padding: 16px;
+
 	text-align: center;
-	background-color: #ffc98c;
-	
-    box-shadow: 2px 2px 12px -5px #727272;
 }
 
 .button-apply,
@@ -46,7 +65,7 @@ html, body {
     background: #49b40a;
 }
 
-input {
+.select {
     padding: 8px;
     border: 2px solid #333333;
     font-size: medium;
@@ -55,6 +74,10 @@ input {
 
 
     border-radius: 8px;
+}
+
+option {
+    text-align: right;
 }
 
 .button-apply:hover,
@@ -77,8 +100,12 @@ input {
 }
 
 #screen {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
     max-width: 1120px;
-    min-height: 690px;
+    height: 690px;
+
     margin: 25px auto 25px;
 
     border-radius: 15px;
@@ -88,7 +115,15 @@ input {
         2px -2px 10px -5px #727272,
         -2px 2px 10px -5px #727272,
         2px 2px 10px -5px #727272;
-    background: #fbffee;
+    background: #faffea;
+}
+
+.empty {
+    width: 1px;
+    height: 1px;
+    background: inherit;
+    color: transparent;
+
 }
 
 #workGround {
@@ -108,4 +143,8 @@ input {
 
 #workGround div {
 	text-align: center;
+}
+
+#moveLetter {
+    color: red;
 }
