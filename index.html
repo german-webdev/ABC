@@ -12,38 +12,43 @@
 	<body>
 
 		<header class="header">
-				<a href="#">
-					<img class="logo__image" src="dist/images/logo.png" alt="Logo">
-				</a>
+			<a class="logo" href="#">
+				<img class="logo__image" src="dist/images/logo.png" alt="Logo">
+			</a>
 
 			<div id="settings">
-				<span>Установить интервал в секундах: </span> <select class="select" id="delayInput" size="1" name="time[]">
-					<option value="500">0.5</option>
-					<option selected value="1000">1</option>
-					<option value="1500">1.5</option>
-					<option value="2000">2</option>
-					<option value="2500">2.5</option>
-					<option value="3000">3</option>
-				</select>
+				<div class="setter">
+					<span class="select-text">Установить интервал в секундах: </span> <select class="select" id="delayInput" size="1" name="time[]">
+						<option value="500">0.5</option>
+						<option selected value="1000">1.0</option>
+						<option value="1500">1.5</option>
+						<option value="2000">2.0</option>
+						<option value="2500">2.5</option>
+						<option value="3000">3.0</option>
+					</select>
+				</div>
 
+				<span class="divider"></span>
 
 				<div class="button-box">
-					<button class="button-apply" onclick="setDelay()" title="Установить интервал в секундах">Принять</button>
-					<button class="button-start" id="pauseButton" title="Старт/Стоп">Старт</button>
+					<button class="button button-apply" onclick="setDelay()" title="Установить интервал в секундах">Принять</button>
+					<button class="button button-start" id="pauseButton" title="Старт/Стоп">Старт</button>
 				</div>
 	
 			</div>
 		</header>
 
 
-
-		<div id="screen">
-			<div id="workGround">
-			<div id="voiceLetter">Э</div>
-			<div id="moveLetter">П</div>
-			<div class="empty">.</div>
-		</div>
-
+		<main class="main">
+			<div class="container">
+				<div id="screen">
+					<div id="workGround">
+					<div id="voiceLetter">Э</div>
+					<div id="moveLetter">П</div>
+					<div class="empty">.</div>
+				</div>
+			</div>
+		</main>
 	<script type="text/javascript" src="dist\app.js"></script>
 	</body>
 </html>
