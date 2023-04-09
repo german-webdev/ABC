@@ -12,13 +12,19 @@
 	<body>
 
 		<header class="header">
-			<a class="logo" href="#">
+			<a class="logo" href="https://xn--e1aijbhlw.xn--p1ai/">
 				<img class="logo__image" src="dist/images/logo.png" alt="Logo">
+				<a class="logo__title" href="https://xn--e1aijbhlw.xn--p1ai/">Центр развития и коррекции</a>
 			</a>
+
+			<address class="info">
+				<a class="info__text" href="https://yandex.ru/maps/?um=constructor%3Aad5db431c64d2fe1c420e03bdccbbd6670b32980c578620a0fd42d8e1888e4c4&source=constructorLink" target="_blank">г. Ставрополь, ул. Октябрьская, 192/1</a>
+				<a class="info__text" href="tel:+79624136855">+7 (962) 413 68 55</a>
+			</address>
 
 			<div id="settings">
 				<div class="setter">
-					<span class="select-text">Установить интервал в секундах: </span> <select class="select" id="delayInput" size="1" name="time[]">
+					<span class="select-text">Установить интервал в секундах:</span> <select class="select" id="delayInput" size="1" name="time[]">
 						<option value="500">0.5</option>
 						<option selected value="1000">1.0</option>
 						<option value="1500">1.5</option>
@@ -26,12 +32,13 @@
 						<option value="2500">2.5</option>
 						<option value="3000">3.0</option>
 					</select>
+					<button class="button button-apply" onclick="setDelay()" title="Установить интервал в секундах">Принять</button>
 				</div>
 
 				<span class="divider"></span>
 
 				<div class="button-box">
-					<button class="button button-apply" onclick="setDelay()" title="Установить интервал в секундах">Принять</button>
+					<button class="button button-rules" title="Правила игры">Как играть?</button>
 					<button class="button button-start" id="pauseButton" title="Старт/Стоп">Старт</button>
 				</div>
 	
@@ -45,10 +52,38 @@
 					<div id="workGround">
 					<div id="voiceLetter">Э</div>
 					<div id="moveLetter">П</div>
-					<div class="empty">.</div>
 				</div>
 			</div>
 		</main>
-	<script type="text/javascript" src="dist\app.js"></script>
+
+
+
+		<div class="modal-rules">
+
+			<button class="modal-button" title="Закрыть"></button>
+			
+			<div class="modal-rules__content modal-rules__content--p">
+				<h2>Цель Игры</h2>
+				<p>
+					"Цель упражнения Алфавит (как и всех игр Нового Кода НЛП) — вход в состояние сверх-высокой продуктивности (High Performance State). Электронный Алфавит Нового Кода НЛП — это современная модификация игры Нового Кода НЛП «Алфавит», созданной Джоном Гриндером. Джон Гриндер — один из создателей НЛП и автор «продвинутой» версии — Нового Кода НЛП."
+				</p>
+				<h2>Правила игры</h2>
+				<p>
+					"Выберите наиболее удобную для вас скорость Алфавита. Начинайте с 2 секунд. Ваша задача — произносить верхнюю букву, а на нижнюю букву реагировать поднятием руки (П — Правой, Л — Левой, В или О — Вместе Обе руки). Очень высоко поднимать руки нет необходимости – поднимайте их настолько, насколько это вам комфортно, но так, чтобы рука участвовала не меньше, чем от локтя. Произносить буквы нужно обязательно вслух."
+				</p>
+				<p>
+					"Избегайте ненужных напряжений — старайтесь оставаться расслабленными и напрягайте только те мышцы, которые нужны для движений. Можно танцевать. Я рекомендую включать ВСЕГДА одну и ту же музыку. Тогда в дальнейшем, для входа в состояние сверх-высокой продуктивности — будет достаточно включить ИМЕННО ЭТУ МУЗЫКУ."
+				</p>
+				<p>
+					"В случае ошибки вы просто продолжаете играть дальше. Смысл игры заключается не в перегрузке сознания, а в вызове состояния сверх- высокой продуктивности – это разные вещи. Поэтому поддерживайте баланс между той степенью сложности, при которой вы остаетесь достаточно успешными, и, в то же время, при которой игра является для вас интересной. Не бойтесь ошибаться, относитесь к игре легко."
+				</p>
+				<h3>Продолжительность игры</h3>
+				<p>
+					"Продолжительность игры в Алфавит определяется входом в состояние сверх- высокой продуктивности. Обычно это минимум 5 минут — максимум 25 минут."
+				</p>
+			</div>
+		</div>
+	<script type="text/javascript" src="dist\app.js" defer></script>
+	<script type="text/javascript" src="dist\modal.js"></script>
 	</body>
 </html>

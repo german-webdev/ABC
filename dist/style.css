@@ -6,38 +6,111 @@ html, body {
 	padding: 0;	
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
+}
+
 .header {
     display: flex;
 
     position: sticky;
     top: 0;
+    height: 110px;
     
     justify-content: center;
     align-items: center;
 
     padding: 16px;
 
-    background: linear-gradient(130deg, #ffffff 10%, #facb8d 90% );
+    background: linear-gradient(40deg, #ffffff 240px, #facb8d 240px );
     box-shadow: 2px 2px 15px -5px #727272;
 }
 
 .logo {
     position: absolute;
     top: -65px;
-    left: -30px;
+    left: -40px;
 }
 
 .logo__image {
     width: 250px;
 }
 
+.logo__title {
+    position: absolute;
+    top: 68px;
+    left: 17px;
+
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #ff8800;
+    text-shadow: 0.5px 0.5px 2px #9c9c9c;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+    top: 85px;
+    left: 18px;
+}
+
+.info__text {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.info__text:hover {
+    color: #009b86
+}
+
 #settings {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    margin-right: auto;
+    margin-left: 40%;
+
+}
+
+.setter {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+}
 
-	text-align: center;
+.select {
+    width: 60px;
+    height: 35px;
+
+    font-size: 16px;
+
+    margin-left: 5px;
+    padding: 0;
+
+    border: 2px solid #333333;
+    border-radius: 8px;
+}
+
+option {
+    text-align: center;
+
+}
+
+.button-box {
+    display: flex;
 }
 
 .button {
@@ -46,6 +119,7 @@ html, body {
     width: 100px;
 
     font-weight: 700;
+    font-size: 13px;
     cursor: pointer;
 
     margin: 5px 0;
@@ -54,37 +128,32 @@ html, body {
     border-radius: 8px;
     color: azure;
     -webkit-tap-highlight-color: transparent;
+    background: #ff002b;
 
     transform: translateY(0);
-
     transition: all 0.1s ease-in-out;
 }
 
 .button-apply {
-    background: #ff002b;
+    height: 38px;
+}
+
+.divider {
+    display: block;
+    min-width: 400px;
+    margin: 5px 10px;
+    height: 2px;
+    background: #c0c0c0;
+    border-radius: 2px;
 }
 
 .button-start {
+    transform: scale(1);
     background: #49b40a;
 }
 
-.select {
-    padding: 8px;
-    border: 2px solid #333333;
-    font-size: medium;
-    margin: 5px 0;
-    margin-left: 5px;
-
-
-    border-radius: 8px;
-}
-
-option {
-    text-align: right;
-}
-
-.button-apply:hover,
-.button-start:hover {
+.button:hover,
+.modal-button:hover {
 
     transform: translateY(-1px);
 
@@ -96,8 +165,8 @@ option {
     transition: all 0.1s ease-in-out;
 }
 
-.button-apply:active,
-.button-start:active {
+.button:active,
+.modal-button:active {
     transform: translateY(0);
     box-shadow: none;
 }
@@ -125,14 +194,6 @@ option {
     background: #faffea;
 }
 
-.empty {
-    width: 1px;
-    height: 1px;
-    background: inherit;
-    color: transparent;
-
-}
-
 #workGround {
     position: relative;
 
@@ -157,7 +218,89 @@ option {
 }
 
 
+
+.modal-rules {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    max-width: 400px;
+    height: 100vh;
+    background: #FAFAFA;
+    overflow-y: auto;
+
+    box-shadow: 10px 10px 20px 5px #292929;
+    transform: translateX(1000px) scale(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.modal-rules::-webkit-scrollbar { width: 0; }
+
+.modal-rules--active {
+    transform: translateX(0) scale(1);
+}
+
+.modal-button {
+    text-align: center;
+    outline: none;
+    border: none;
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+    background: #ff002b;
+
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+.modal-button::before {
+    display: block;
+    content: '';
+    width: 25px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #FFFFFF;
+
+    transform: translate(2px, 2px) rotate(45deg);
+}
+
+.modal-button::after {
+    display: block;
+    content: '';
+    width: 25px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #FFFFFF;
+
+    transform: translate(2px, -2px) rotate(-45deg);
+}
+
+
+.modal-rules__content--p {
+    padding: 0 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------@media----------- */
+
 @media (min-width: 320px) and (max-width: 767px) {
+    .header {
+        height: 130px;
+        background: linear-gradient(20deg, #ffffff 50%, #facb8d 80% );
+    }
+
     .logo {
         top: -50px;
         left: -40px;
@@ -167,107 +310,96 @@ option {
         width: 200px;
     }
 
-    .header {
-        flex-direction: column;
-        height: 125px;
+    .logo__title {
+        font-size: 11px;
+        top: 57px;
+        left: 6px;
+    }
+
+    .info {
+        font-size: 10px;
+        top: 5px;
+        right: 5px;
+        text-align: right;
     }
 
     #settings {
         position: relative;
-        top: 5px;
-        flex-wrap: nowrap;
+        top: 38px;
+        min-width: 320px;
+        margin: 0 auto;
+    }
+
+    #settings::before {
+        content: '';
+        width: 300px;
+        height: 2px;
+        background: #c0c0c0;
     }
 
     .setter {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 2px;
-        
-    }
-
-    .divider {
-        display: block;
-        position: absolute;
-        top: 46px;
-        min-width: 320px;
         margin: 0 10px;
-        height: 2px;
-        background: #c0c0c0;
-        border-radius: 2px;
     }
 
     .select-text {
-        width: 100%;
+        text-align: right;
         font-size: 14px;
+        line-height: 12px;
+        max-width: 1000px;
+        word-spacing: wrap;
     }
 
     .select {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 80px;
+        width: 70px;
         height: 30px;
         padding: 0;
         font-size: 14px;
 
         text-align: end;
         border: 2px solid #333333;
-        vertical-align: middle
+
     }
 
     .select option {
         font-size: 14px;
     }
 
-    .button-box {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
+    .divider {
+        min-width: 300px;
+        margin: 0;
     }
 
     .button {
-        display: flex;
+        height: 30px;
+        font-size: 13px;
+        font-weight: 600;
+        padding: 5px;
+        letter-spacing: 0.2px;
         
-        justify-content: center;
-        align-items: center;
-        margin: 0;
-        font-size: 16px;
-        padding: 8px 8px;
-        letter-spacing: 0.4px;
-
-        transform: scale(0.85);
     }
 
-    .button-start {
-        position: absolute;
-        top: 55px;
-        right: calc(50% - 50px);
-
-        transform: scale(0.85);
+    .button-rules {
+        width: 100px;
     }
 
-
-    .button-apply {
-        height: 33px;
-    }
-
-    .button:hover {
-
-        transform: scale(0.85);
-
+    .button:hover,
+    .modal-button:hover {
         box-shadow: none;
         transition: all 0.1s ease-in-out;
     }
 
-    .button:focus {
-        transform: scale(0.85) translateY(0);
+    .button:focus,
+    .modal-button:focus {
+        transform: translateY(0);
         box-shadow: none;         
     }
 
-    .button:active {
-        transform: scale(0.85) translateY(0);
+    .button:active,
+    .modal-button:active {
+        transform: translateY(0);
         box-shadow:     
             -2px -2px 10px -5px #ffffff,
             2px -2px 10px -5px #727272,
@@ -292,35 +424,25 @@ option {
     }
 }
 
+@media (min-width: 490px) and (max-width: 767px) {
+    .info {
+        font-size: 12px;
+    }
+}    
+
+
 @media (min-width: 768px) and (max-width: 1024px) {
     .header {
         flex-direction: column;
-        height: 80px;
-    }
-
-    #settings {
-        position: relative;
-        right: -40px;
+        height: 110px;
     }
 
     .select option {
         font-size: 14px;
     }
 
-    .button-box {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-left: 5px;
-    }
-
     .button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 5px;
-        
-        font-size: 12px;
+        font-size: 13px;
         padding: 8px 8px;
         letter-spacing: 0.3px;
 
@@ -347,6 +469,10 @@ option {
             2px -2px 10px -5px #727272,
             -2px 2px 10px -5px #727272,
             2px 2px 10px -5px #727272;
+    }
+
+    .container {
+        padding: 0 20px;
     }
 
     #workGround {
