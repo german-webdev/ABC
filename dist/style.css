@@ -203,17 +203,21 @@ option {
     }
 
     .select {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 80px;
         height: 30px;
-        padding: 5px;
-        font-size: 16px;
+        padding: 0;
+        font-size: 14px;
 
         text-align: end;
         border: 2px solid #333333;
+        vertical-align: middle
     }
 
     .select option {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .button-box {
@@ -229,9 +233,9 @@ option {
         justify-content: center;
         align-items: center;
         margin: 0;
-        font-size: 14px;
+        font-size: 16px;
         padding: 8px 8px;
-        letter-spacing: 1.1px;
+        letter-spacing: 0.4px;
 
         transform: scale(0.85);
     }
@@ -277,7 +281,6 @@ option {
 
     #screen {
         height: 350px;
-
         margin: 10px auto 10px;
     }
 
