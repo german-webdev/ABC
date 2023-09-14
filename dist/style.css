@@ -19,42 +19,24 @@ button {
 }
 
 .header {
-    display: flex;
+    display: grid;
 
-    position: sticky;
-    top: 0;
-    height: 110px;
+    grid-template-columns: 460px 50%;
+    grid-template-rows: 140px;
     
-    justify-content: center;
-    align-items: center;
-
     padding: 16px;
 
-    background: linear-gradient(40deg, #ffffff 240px, #facb8d 240px );
+    background: linear-gradient(127deg, #ffffff 395px, #facb8d 240px);
     box-shadow: 2px 2px 15px -5px #727272;
 }
 
 .logo {
-    position: absolute;
-    top: -65px;
-    left: -40px;
+    position: relative;
+    top: -25px;
 }
 
 .logo__image {
-    width: 250px;
-}
-
-.logo__title {
-    position: absolute;
-    top: 68px;
-    left: 17px;
-
-    font-size: 16px;
-    text-transform: uppercase;
-    color: #05ad37;
-    text-shadow: 0.5px 0.5px 1px #9b9a9a;
-    font-style: normal;
-    font-weight: 600;
+    width: 450px;
 }
 
 .info {
@@ -62,7 +44,7 @@ button {
     flex-direction: column;
 
     position: absolute;
-    top: 85px;
+    top: 110px;
     left: 18px;
 }
 
@@ -80,10 +62,6 @@ button {
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
-
-    margin-right: auto;
-    margin-left: 40%;
-
 }
 
 .setter {
@@ -309,39 +287,37 @@ option {
 
 /* ----------@media----------- */
 
-@media (min-width: 320px) and (max-width: 767px) {
+@media (min-width: 320px) and (max-width: 890px) {
     .header {
-        height: 130px;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: repeat(2, auto);
+        height: 140px;
         background: linear-gradient(20deg, #ffffff 50%, #facb8d 80% );
+        padding: 10px;
     }
 
     .logo {
-        top: -50px;
-        left: -40px;
+        position: relative;
+        top: 0;
+        display: none;
     }
 
     .logo__image {
-        width: 200px;
-    }
-
-    .logo__title {
-        font-size: 11px;
-        top: 57px;
-        left: 6px;
+        width: 250px;
     }
 
     .info {
-        font-size: 10px;
-        top: 5px;
-        right: 5px;
+        grid-column: 2;
+        width: 100%;
+        position: static;
         text-align: right;
-    }
+        font-size: 12px;
+        padding-right: -20px;
+    }   
+    
 
     #settings {
-        position: relative;
-        top: 38px;
-        min-width: 320px;
-        margin: 0 auto;
+        grid-column: span 2;
     }
 
     #settings::before {
@@ -436,20 +412,15 @@ option {
         line-height: 42px;
         font-weight: bold;
     }
-}
-
-@media (min-width: 490px) and (max-width: 767px) {
-    .info {
-        font-size: 12px;
-    }
-}    
+} 
 
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 890px) and (max-width: 1024px) {
     .header {
-        flex-direction: column;
-        height: 110px;
-    }
+        grid-template-columns: 440px 50%;
+        padding: 12px;
+        height: 140px;
+    } 
 
     .select option {
         font-size: 14px;
@@ -457,7 +428,6 @@ option {
 
     .button {
         font-size: 13px;
-        padding: 8px 8px;
         letter-spacing: 0.3px;
     }
 
