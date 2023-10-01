@@ -26,13 +26,13 @@ button {
     
     padding: 16px;
 
-    background: linear-gradient(127deg, #ffffff 395px, #facb8d 240px);
+    background: linear-gradient(127deg, #ffffff 400px, #facb8d 240px);
     box-shadow: 2px 2px 15px -5px #727272;
 }
 
 .logo {
     position: relative;
-    top: -25px;
+    top: -15px;
 }
 
 .logo__image {
@@ -275,16 +275,6 @@ option {
 }
 
 
-
-
-
-
-
-
-
-
-
-
 /* ----------@media----------- */
 
 @media (min-width: 320px) and (max-width: 890px) {
@@ -298,8 +288,7 @@ option {
 
     .logo {
         position: relative;
-        top: 0;
-        display: none;
+        top: -5px; 
     }
 
     .logo__image {
@@ -459,5 +448,19 @@ option {
         font-size: 70px;
         line-height: 65px;
         font-weight: bold;
+    }
+}
+
+@media (min-width: 1920px) {
+    .header {
+        grid-template-columns: 460px 50%;
+    } 
+
+    #settings {
+        position: absolute;
+        top: 25px;
+        left: 50%;
+        transform: translateX(-50%);
+        
     }
 }
