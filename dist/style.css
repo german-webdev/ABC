@@ -406,6 +406,10 @@ option {
         line-height: 42px;
         font-weight: bold;
     }
+
+    .modal-rules__title {
+        font-size: 22px;
+    }
 }
 
 @media (min-width: 490px) and (max-width: 890px) {
