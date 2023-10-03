@@ -1,5 +1,5 @@
 {
-  "background_color": "#ffffff",
+  "background_color": "transparent",
   "description": "Brain exercise game Alphabet",
   "dir": "ltr",
   "display": "standalone",
@@ -8,7 +8,7 @@
   "scope": "/",
   "short_name": "ABC",
   "start_url": "https://german-webdev.github.io/ABC/",
-  "theme_color": "#ffffff",
+  "theme_color": "transparent",
   "categories": [
     "games"
   ],
