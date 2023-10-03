@@ -1,11 +1,4 @@
 {
-  "name": "ABC",
-  "description": "Brain exercise game Alphabet",
-  "start_url": "https://german-webdev.github.io/ABC/",
-  "lang": "ru",
-  "theme_color": "transparent",
-  "background_color": "transparent",
-  "display": "standalone",
   "icons": [
     {
       "src": "dist/images/windows11/SmallTile.scale-100.png",
