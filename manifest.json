@@ -4,6 +4,7 @@
   "start_url": "https://german-webdev.github.io/ABC/",
   "lang": "ru",
   "theme_color": "#ffffff",
+  "background_color": "#ffffff",
   "display": "standalone",
   "icons": [
     {
