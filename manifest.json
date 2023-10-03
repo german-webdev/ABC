@@ -1,11 +1,18 @@
 {
-  "name": "ABC",
+  "background_color": "#ffffff",
   "description": "Brain exercise game Alphabet",
-  "start_url": "https://german-webdev.github.io/ABC/",
-  "lang": "ru",
-  "theme_color": "transparent",
-  "background_color": "transparent",
+  "dir": "ltr",
   "display": "standalone",
+  "name": "ABC",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "ABC",
+  "start_url": "https://german-webdev.github.io/ABC/",
+  "theme_color": "#ffffff",
+  "categories": [
+    "games"
+  ],
+  "screenshots": [],
   "icons": [
     {
       "src": "dist/images/windows11/SmallTile.scale-100.png",
@@ -455,5 +462,15 @@
       "src": "dist/images/ios/1024.png",
       "sizes": "1024x1024"
     }
+  ],
+  "shortcuts": [],
+  "id": "abc",
+  "lang": "ru",
+  "display_override": [
+    "standalone",
+    "window-controls-overlay",
+    "browser",
+    "fullscreen",
+    "minimal-ui"
   ]
 }
