@@ -1,19 +1,19 @@
 {
   "name": "ABC",
   "description": "Brain exercise game Alphabet",
-  "start_url": "https://german-webdev.github.io/ABC/",
+  "start_url": "/index.html",
   "lang": "ru",
-  "theme_color": "#FFFFFF",
+  "theme_color": "#ffffff",
   "display": "standalone",
   "icons": [
     {
-      "src": "android-icon-192x192.png",
+      "src": "dist/images/android-icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "ms-icon-310x310.png",
-      "sizes": "310x310",
+      "src": "dist/images/ms-icon-512x512.png",
+      "sizes": "512x512",
       "type": "image/png"
     }
   ]
