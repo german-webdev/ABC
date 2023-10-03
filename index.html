@@ -100,8 +100,13 @@
 				</p>
 			</div>
 		</div>
-		<script type="text/javascript" src="dist\app.js"></script>
 		<script type="text/javascript" src="dist\main.js" defer></script>
 		<script type="text/javascript" src="dist\modal.js"></script>
+
+		<script>
+			if (typeof navigator.serviceWorker !== 'undefined') {
+				navigator.serviceWorker.register('sw.js').then(console.log('OK'))
+			}
+		</script>
 	</body>
 </html>
