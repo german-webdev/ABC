@@ -22,13 +22,13 @@ const vitePWA = VitePWA({
     theme_color: "#ffffff",
     background_color: "#ffffff",
     icons: [{
-      src: './assets/images/android-chrome-192x192.png',
+      src: 'assets/images/android-chrome-192x192.png',
       sizes: '192x192',
       type: 'image/png',
 
     },
     {
-      src: './assets/images/android-chrome-512x512.png',
+      src: 'assets/images/android-chrome-512x512.png',
       sizes: '512x512',
       type: 'image/png',
       
@@ -54,7 +54,7 @@ export default defineConfig({
             return "assets/fonts/[name]-[hash][extname]";
           }
 
-          if (/\.css$/.test(name ?? "")) {
+          if (/\.(css|scss|less)$/.test(name ?? "")) {
             return "assets/css/[name]-[hash][extname]";
           }
 
