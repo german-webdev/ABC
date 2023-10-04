@@ -12,7 +12,7 @@ pages.forEach((page) => {
 
 const vitePWA = VitePWA({
   registerType: "autoUpdate",
-  outDir: "build",
+  outDir: ".",
   manifest: {
     name: "ABC-Games",
     short_name: "ABC",
@@ -22,13 +22,13 @@ const vitePWA = VitePWA({
     theme_color: "#ffffff",
     background_color: "#ffffff",
     icons: [{
-      src: 'assets/images/android-chrome-192x192.png',
+      src: './public/assets/images/android-chrome-192x192.png',
       sizes: '192x192',
       type: 'image/png',
 
     },
     {
-      src: 'assets/images/android-chrome-512x512.png',
+      src: './public/assets/images/android-chrome-512x512.png',
       sizes: '512x512',
       type: 'image/png',
       
