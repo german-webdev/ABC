@@ -17,20 +17,18 @@ const vitePWA = VitePWA({
   manifest: {
     name: "ABC-Games",
     short_name: "ABC",
-    scope: "https://german-webdev.github.io/ABC/",
-    start_url: "https://german-webdev.github.io/ABC/",
     display: "standalone",
     description: "Игра для зарядки мозга «Алфавит»",
     theme_color: "#ffffff",
     background_color: "#ffffff",
     icons: [{
-      src: './public/assets/images/android-chrome-192x192.png',
+      src: 'assets/images/android-chrome-192x192.png',
       sizes: '192x192',
       type: 'image/png',
 
     },
     {
-      src: './public/assets/images/android-chrome-512x512.png',
+      src: 'assets/images/android-chrome-512x512.png',
       sizes: '512x512',
       type: 'image/png',
       
