@@ -1,7 +1,7 @@
 export default {
-  globDirectory: '.',
+  globDirectory: 'build/',
   globPatterns: [
       '**/*/{css,woff2,png,svg,jpg,jpeg,js}'
   ],
-  swDest: 'sw.js',
+  swDest: 'build/sw.js',
 }

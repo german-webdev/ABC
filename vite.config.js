@@ -12,7 +12,7 @@ pages.forEach((page) => {
 
 const vitePWA = VitePWA({
   registerType: "autoUpdate",
-  outDir: ".",
+  outDir: "build",
   manifest: {
     name: "ABC-Games",
     short_name: "ABC",
@@ -39,7 +39,7 @@ const vitePWA = VitePWA({
 export default defineConfig({
   build: {
     target: "es2017",
-    outDir: ".",
+    outDir: "build",
     rollupOptions: {
       input: {
         ...pagesInput,
