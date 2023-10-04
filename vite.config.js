@@ -45,6 +45,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         ...pagesInput,
+        app: './src/app.js',
+        modal: './src/modal.js',
       },
       output: {
         assetFileNames: ({ name }) => {
@@ -58,10 +60,6 @@ export default defineConfig({
 
           if (/\.(css|scss|less)$/.test(name ?? "")) {
             return "assets/css/[name]-[hash][extname]";
-          }
-
-          if (/\.js$/.test(name ?? "")) {
-            return "assets/js/[name]-[hash][extname]";
           }
 
           return "assets/[name]-[hash][extname]";
