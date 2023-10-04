@@ -12,7 +12,7 @@ pages.forEach((page) => {
 
 const vitePWA = VitePWA({
   registerType: "autoUpdate",
-  outDir: "build",
+  outDir: ".",
   manifest: {
     name: "ABC-Games",
     short_name: "ABC",

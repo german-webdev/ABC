@@ -1,5 +1,5 @@
 export default {
-  globDirectory: 'build/',
+  globDirectory: '.',
   globPatterns: [
       '**/*/{css,woff2,png,svg,jpg,jpeg,js}'
   ],
