@@ -2,19 +2,13 @@ import { defineConfig } from "vite";
 import { ViteAliases } from "vite-aliases";
 import legacy from "@vitejs/plugin-legacy";
 import pages from "./vitejs/pages.config";
-import scripts from "./vitejs/index.config"
 import timeMarkPlugin from "./plugins/vite-plugin-timemark";
 import { VitePWA } from "vite-plugin-pwa";
 
 const pagesInput = {};
-const scriptInput = {};
 
 pages.forEach((page) => {
   pagesInput[page.name] = page.path;
-});
-
-scripts.forEach((script) => {
-  scriptInput[script.name] = script.path;
 });
 
 const vitePWA = VitePWA({
@@ -51,7 +45,6 @@ export default defineConfig({
     rollupOptions: {
       input: {
         ...pagesInput,
-        ...scriptInput,
       },
       output: {
         assetFileNames: ({ name }) => {
