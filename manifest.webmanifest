@@ -575,9 +575,9 @@
       "platform": "web"
     }
   ],
-  "scope": "/ABC/",
+  "scope": "/*",
   "short_name": "ABC",
-  "start_url": "/ABC/",
+  "start_url": "/*",
   "theme_color": "#ffffff",
 
   "screenshots": [
