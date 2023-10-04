@@ -1,0 +1,2 @@
+/* Last build: 4:9:2023  21.41.52*/
+function u(){import.meta.url,import("_").catch(()=>1);async function*e(){}}const n=document.querySelector(".button-rules"),o=document.querySelector(".modal-rules"),s=document.querySelector(".modal-button"),l=document.body;n.addEventListener("click",e=>{const c=l.classList.contains("modal-rules--active");o.classList.toggle("modal-rules--active"),s.addEventListener("click",t),c&&t()});document.addEventListener("keydown",function(e){e.keyCode==27&&t()});function t(){o.classList.remove("modal-rules--active")}export{u as __vite_legacy_guard};
