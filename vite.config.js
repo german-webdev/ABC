@@ -38,6 +38,7 @@ const vitePWA = VitePWA({
 
 export default defineConfig({
   build: {
+    base: "/abc/",
     target: "es2017",
     outDir: "build",
     rollupOptions: {
