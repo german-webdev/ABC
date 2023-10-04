@@ -1,2 +1,0 @@
-/* Last build: 4:9:2023  22.42.19*/
-System.register([],(function(e,t){"use strict";return{execute:function(){const e=document.querySelector(".button-rules"),t=document.querySelector(".modal-rules"),c=document.querySelector(".modal-button"),n=document.body;function o(){t.classList.remove("modal-rules--active")}e.addEventListener("click",(e=>{const s=n.classList.contains("modal-rules--active");t.classList.toggle("modal-rules--active"),c.addEventListener("click",o),s&&o()})),document.addEventListener("keydown",(function(e){27==e.keyCode&&o()}))}}}));

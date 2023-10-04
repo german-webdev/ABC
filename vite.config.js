@@ -45,11 +45,9 @@ export default defineConfig({
     rollupOptions: {
       input: {
         ...pagesInput,
-        app: './src/app.js',
-        modal: './src/modal.js',
       },
       output: {
-        assetFileNames: ({ name }) => {
+        assetFileNames: ({ name, ext }) => {
           if (/\.(gif|jpe?g|png|svg)$/.test(name ?? "")) {
             return "assets/images/[name]-[hash][extname]";
           }
