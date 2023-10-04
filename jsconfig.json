@@ -2,14 +2,14 @@
     "compilerOptions": {
         "baseUrl": ".",
         "paths": {
-            "~/*": [
-                "src/*"
+            "~images/*": [
+                "src/images/*"
             ],
             "~styles/*": [
                 "src/styles/*"
             ],
-            "~images/*": [
-                "src/images/*"
+            "~/*": [
+                "src/*"
             ]
         }
     }

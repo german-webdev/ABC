@@ -2,6 +2,7 @@ import { defineConfig } from "vite";
 import { ViteAliases } from "vite-aliases";
 import legacy from "@vitejs/plugin-legacy";
 import pages from "./vitejs/pages.config";
+import timeMarkPlugin from "./plugins/vite-plugin-timemark";
 import { VitePWA } from "vite-plugin-pwa";
 
 const pagesInput = {};
@@ -16,6 +17,7 @@ const vitePWA = VitePWA({
   manifest: {
     name: "ABC-Games",
     short_name: "ABC",
+    scope: "https://german-webdev.github.io/ABC/",
     start_url: "https://german-webdev.github.io/ABC/",
     display: "standalone",
     description: "Игра для зарядки мозга «Алфавит»",
@@ -33,12 +35,12 @@ const vitePWA = VitePWA({
       type: 'image/png',
       
     }],
+    "display_override": ["fullscreen", "minimal-ui", "window-controls-overlay"],
   },
 });
 
 export default defineConfig({
   build: {
-    base: "/abc/",
     target: "es2017",
     outDir: "build",
     rollupOptions: {
@@ -74,6 +76,7 @@ export default defineConfig({
     legacy({
       targets: ["defaults", "not IE 11"],
     }),
+    timeMarkPlugin(),
     vitePWA,
   ],
 })
