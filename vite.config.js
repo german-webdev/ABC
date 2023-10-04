@@ -18,7 +18,7 @@ const vitePWA = VitePWA({
     name: "ABC-Games",
     short_name: "ABC",
     display: "standalone",
-    start_url: "https://abc-a2s55kbsw-german-webdev.vercel.app",
+    start_url: "https://abc-eight.vercel.app/",
     description: "Игра для зарядки мозга «Алфавит»",
     theme_color: "#ffffff",
     background_color: "#ffffff",
