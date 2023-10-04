@@ -1,4 +1,6 @@
 node_modules/
+build/
+dist/
 reports/
 raml/examples_local/
 .vscode/
@@ -7,3 +9,4 @@ coverage/
 /yarn.lock
 
 .npmrc
+
